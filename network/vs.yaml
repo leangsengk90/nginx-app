@@ -1,17 +1,17 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: vs-green
-  namespace: nginx-green
+  name: vs-qa
+  namespace: nginx-qa
 spec:
   hosts:
   - "nginx-qa.com"
   gateways:
-  - gateway-green
+  - gateway-qa
   http:
   - route:
      - destination:
         host: nginx
-        subset: green
+        subset: qa
 
 
