@@ -13,6 +13,6 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "nginx.com"
-    - "nginx-qa.com"
+    - "stable.nginx.com"
+    - "qa.nginx.com"
 
