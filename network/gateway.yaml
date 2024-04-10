@@ -1,12 +1,12 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: gateway-green
-  namespace: nginx-green
+  name: gateway-qa
+  namespace: nginx-qa
 spec:
   selector:
-    app: istio-ingressgateway-blue
-    istio: ingressgateway-blue
+    app: istio-ingressgateway-stable
+    istio: ingressgateway-stable
   servers:
   - port:
       number: 80
