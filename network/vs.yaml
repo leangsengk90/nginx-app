@@ -5,7 +5,7 @@ metadata:
   namespace: nginx-green
 spec:
   hosts:
-  - "nginx.com"
+  - "nginx-qa.com"
   gateways:
   - gateway-green
   http:
