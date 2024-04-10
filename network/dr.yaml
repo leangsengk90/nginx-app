@@ -6,6 +6,6 @@ metadata:
 spec:
   host: nginx
   subsets:
-  - name: green
+  - name: qa
     labels:
-      version: green
+      app: nginx
