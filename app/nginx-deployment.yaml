@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-blue-1
-  namespace: nginx-blue
+  name: nginx-green-2
+  namespace: nginx-green
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: nginx
-      version: blue
+      version: green
   template:
     metadata:
       labels:
         app: nginx
-        version: blue
+        version: green
     spec:
       containers:
-      - name: nginx-blue
-        image: xeng/nginx-1:latest
+      - name: nginx-green
+        image: xeng/nginx-2:latest
         ports:
         - containerPort: 80
