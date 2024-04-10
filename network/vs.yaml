@@ -5,7 +5,7 @@ metadata:
   namespace: nginx-qa
 spec:
   hosts:
-  - "nginx-qa.com"
+  - "qa.nginx.com"
   gateways:
   - gateway-qa
   http:
