@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: istio-ingressgateway-blue
+  namespace: nginx-blue
+spec:
+  ports:
+    - name: status-port
+      protocol: TCP
+      port: 15021
+      targetPort: 15021
+    - name: http2
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 8443
+    - name: tcp
+      protocol: TCP
+      port: 31400
+      targetPort: 31400
+    - name: tls
+      protocol: TCP
+      port: 15443
+      targetPort: 15443
+  selector:
+    app: istio-ingressgateway-blue
+    istio: ingressgateway-blue
+  type: ClusterIP
+  sessionAffinity: None
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  internalTrafficPolicy: Cluster
