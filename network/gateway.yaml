@@ -14,5 +14,5 @@ spec:
       protocol: HTTP
     hosts:
     - "stable.nginx.com"
-    - "qa.nginx.com"
+
 
