@@ -1,11 +1,11 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: dr-blue
-  namespace: nginx-blue
+  name: dr-stable
+  namespace: nginx-stable
 spec:
   host: nginx
   subsets:
-  - name: blue
+  - name: stable
     labels:
-      version: blue
+      app: nginx
